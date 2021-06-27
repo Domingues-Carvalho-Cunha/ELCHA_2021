@@ -8,23 +8,33 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Avatar")
-public class Avatar {
+@Table(name="Badge")
+public class Badge {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)  
-    @Column(name="Ava_id")
+    @Column(name="Bad_id")
     private int id;
-    @Column(name="Ava_nickname")
+    @Column(name="Bad_name")
     private String name;
+    @Column(name="Bad_description")
+    private String description;
+    @Column(name="Bad_type")
+    private String type;
     
-    public Avatar() {
+    public Badge() {
     }
-    
+
     public int getId() {
         return id;
     }
     public String getName() {
         return name;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public String getType() {
+        return type;
     }
 }
 
